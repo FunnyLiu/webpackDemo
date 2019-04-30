@@ -616,3 +616,30 @@ server.listen(8081, 'localhost', () => {
     console.log('dev server listening on port 8081');
 });
 ```
+
+
+## 单纯的html和js文件 by webpack-dev-server和html-webpack-plugin demo18_html
+
+webpack.config.js
+``` js
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+module.exports = {
+  mode: 'development',
+  entry: {
+    app: './src/index.js',
+  },
+  output: {
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist')
+  },
+  devtool: 'inline-source-map',
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve('./public/index.html'),
+      title: 'development'
+    })
+  ],
+};
+```
