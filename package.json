@@ -39,6 +39,8 @@
     "build17": "cd demo17_HMR_api && webpack -p",
     "start18": "cd demo18_html && webpack-dev-server --progress --open",
     "build18": "cd demo18_html && webpack -p",
+    "start19": "cd demo19_mock && webpack-dev-server --progress --open",
+    "build19": "cd demo19_mock && webpack -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
