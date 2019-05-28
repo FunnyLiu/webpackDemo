@@ -41,12 +41,15 @@
     "build18": "cd demo18_html && webpack -p",
     "start19": "cd demo19_mock && webpack-dev-server --progress --open",
     "build19": "cd demo19_mock && webpack -p",
+    "start20": "cd demo20_proxy && webpack-dev-server --progress | node app.js",
+    "build20": "cd demo20_proxy && webpack -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.3.4",
+    "axios": "^0.18.0",
     "babel-loader": "^8.0.5",
     "cross-env": "^5.2.0",
     "css-loader": "^2.1.1",
