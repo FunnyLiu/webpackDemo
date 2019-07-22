@@ -779,3 +779,69 @@ module.exports = {
 ``` js
 import './index.less'
 ```
+
+### 使用less，通过css module来管理react组件 by demo23_less_cssmodule
+
+需要对css-loader进行额外配置：
+
+``` js
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+module.exports = {
+  entry: "./main.jsx",
+  output: {
+    filename: "bundle.js"
+  },
+  module: {
+    rules: [
+      {
+        test: /\.less$/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+              localIdentName: '[local]___[hash:base64:5]'
+            }
+          },
+          "less-loader"
+        ]
+      },
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-react"]
+          }
+        }
+      }
+    ]
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve("./index.html"),
+      title: "development"
+    })
+  ]
+};
+
+```
+
+组件内直接引用less即可：
+
+``` js
+import React from 'react'
+import styles from './head.less'
+
+const Head = ()=>{
+    console.log(styles.head)
+    return (
+        <div className={styles.head}>This is head</div>
+    )
+}
+export default Head
+```
