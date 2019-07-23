@@ -845,3 +845,29 @@ const Head = ()=>{
 }
 export default Head
 ```
+
+
+### 多个html分别引入不同的js，通过chunks对应 by demo24_multi_js_html
+
+``` js
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+module.exports = {
+  entry: {
+    page1: "./page1/script/main.js",
+    page2: "./page2/script/main2.js"
+  },
+  output: {
+    filename: "./[name]/build/bundle.js"
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      chunks: ["page1"],
+      filename: "./page1/build/index.html"
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ["page2"],
+      filename: "./page2/build/index.html"
+    })
+  ]
+};
+```

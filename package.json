@@ -49,6 +49,7 @@
     "build22": "cd demo22_less && webpack -p",
     "start23": "cd demo23_less_cssmodule && webpack-dev-server --progress --open",
     "build23": "cd demo23_less_cssmodule && webpack -p",
+    "build24": "cd demo24_multi_js_html && webpack -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
