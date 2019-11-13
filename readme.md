@@ -874,7 +874,7 @@ module.exports = {
 
 ### 静态资源走cdn而不是本地路径，通过output的publicPath配置，by demo25_cdn
 
-``` js
+``` js 
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
