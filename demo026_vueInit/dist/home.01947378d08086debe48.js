@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{13:function(e,n,t){"use strict";t.r(n);var s={},i=t(4),o=Object(i.a)(s,(function(){var e=this.$createElement,n=this._self._c||e;return n("div",{staticClass:"home"},[this._v("\n  This is home component\n  "),n("router-view")],1)}),[],!1,null,null,null);n.default=o.exports}}]);
