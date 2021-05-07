@@ -963,3 +963,8 @@ const config = {
 
 module.exports = config;
 ```
+
+
+
+### hard-source-webpack-plugin插件，做缓存优化构建速度的 demo27_hardSourcePlugin
+
